@@ -172,7 +172,7 @@ function startwatch() {
     watch(['app/' + preprocessor + '/**/*'], mainstyles);
     watch(['app/js/main.js']).on('change', browserSync.reload);;
     watch(['app/pug/**/*.pug'], pug2html);
-    watch(['app/img/**/*'], images);
+    // watch(['app/img/**/*'], images);
 }
 
 
