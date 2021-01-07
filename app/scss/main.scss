@@ -1,7 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'mixins';
-@import 'animation';
+
 
 ::placeholder {
   color: #666;
@@ -13,8 +13,8 @@
 }
   
 html {
-  overflow-x: hidden;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, ::before, ::after {
@@ -24,7 +24,7 @@ html {
 body{
   position: relative;
   min-width: 320px;
-  overflow: hidden;
+  overflow-x: hidden;
   font-weight: 400;
   font-size: 16px;
   font-family: $font-default;
@@ -45,6 +45,17 @@ img {
 
 b, strong {
   font-weight: bold;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
   
 .btn {
@@ -101,11 +112,30 @@ p {
 .text-nowrap {
   white-space: nowrap;
 }
+
+@import 'animation';
   
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 15px;
+
+  @include desktop {
+    max-width: 960px;
+  }
+
+  @include laptop {
+    max-width: 760px;
+    padding: 0 10px;
+  }
+
+  @include tablets {
+    max-width: 540px;
+  }
+
+  @include phones {
+    max-width: 320px;
+  }
 }
 
 /* section */
@@ -114,7 +144,3 @@ p {
 
 
 /* footer */
-
-
-
-@import 'media';

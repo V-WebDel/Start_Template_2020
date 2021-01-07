@@ -39,7 +39,10 @@ function scripts() {
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
         'app/libs/svgxuse-master/svgxuse.min.js',
-        'app/libs/bootstrap/js/bootstrap.bundle.min.js',
+        'node_modules/swiper/swiper-bundle.min.js',
+        'node_modules/gsap/dist/gsap.min.js',
+        'node_modules/gsap/dist/ScrollTrigger.min.js',
+        // 'app/libs/bootstrap/js/bootstrap.bundle.min.js',
     ])
     .pipe(concat('scripts.min.js'))
     .pipe(uglify()) // Сжимаем JavaScript
@@ -65,9 +68,9 @@ function mainscripts() {
 
 function styles() {
     return src([ 
-        //'node_modules/normalize.css/normalize.css',
-        'app/libs/bootstrap/css/bootstrap.min.css',
-        'app/libs/animate/animate.min.css',
+        'node_modules/normalize.css/normalize.css',
+        // 'app/libs/bootstrap/css/bootstrap.min.css',
+        'node_modules/swiper/swiper-bundle.min.css',
     ])
     
     .pipe(concat('styles.min.css')) // Конкатенируем в styles.min.css
