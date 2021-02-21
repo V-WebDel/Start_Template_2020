@@ -6,12 +6,18 @@ html
   include blocks/head.pug
 
   body
-    include blocks/header.pug
 
-    include blocks/top.pug
-    include blocks/advantages.pug
-    include blocks/cases.pug
-    include blocks/about.pug
-    include blocks/contacts.pug
+    .wrapper
+      include blocks/header.pug
 
-    include blocks/footer.pug
+      main
+        include blocks/top.pug
+        include blocks/advantages.pug
+        include blocks/cases.pug
+        include blocks/about.pug
+        include blocks/contacts.pug
+
+      include blocks/footer.pug
+
+    script(src="./js/scripts.min.js")
+    script(src="./js/main.js")
